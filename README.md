@@ -8,6 +8,9 @@ Sitio sencillo para usar como enlace en la bio de Instagram.
 - `styles.css`: estilos del sitio.
 - `hero-arquitectura-web.png`: imagen principal.
 - `jose-manuel-michel-verni.png`: foto de perfil.
+- `qr-web.png`: QR del sitio web de arquitectura.
+- `qr-instagram.png`: QR de Instagram.
+- `qr-whatsapp.png`: QR de WhatsApp.
 
 ## Para subirlo a GitHub
 
@@ -17,6 +20,9 @@ Sitio sencillo para usar como enlace en la bio de Instagram.
    - `styles.css`
    - `hero-arquitectura-web.png`
    - `jose-manuel-michel-verni.png`
+   - `qr-web.png`
+   - `qr-instagram.png`
+   - `qr-whatsapp.png`
 3. En GitHub, entra a `Settings > Pages`.
 4. En `Build and deployment`, selecciona:
    - Source: `Deploy from a branch`
