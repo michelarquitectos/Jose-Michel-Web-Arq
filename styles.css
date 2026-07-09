@@ -269,6 +269,8 @@ p {
 .certificate-card,
 .site-item,
 .qr-card,
+.offer-card,
+.linkedin-link,
 .site-preview,
 .download-link {
   border: 1px solid var(--line);
@@ -279,6 +281,29 @@ p {
 .mini-card {
   min-height: 170px;
   padding: 18px;
+}
+
+.offer-card {
+  display: grid;
+  gap: 4px;
+  margin: 0 0 24px;
+  padding: 22px;
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(47, 93, 80, 0.96), rgba(31, 37, 38, 0.96)),
+    var(--forest);
+  box-shadow: var(--shadow);
+}
+
+.offer-card span,
+.offer-card small {
+  color: rgba(255, 255, 255, 0.76);
+  font-weight: 800;
+}
+
+.offer-card strong {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1;
 }
 
 .certificate-gallery {
@@ -401,7 +426,7 @@ p {
 
 .preview-image {
   height: 100%;
-  min-height: 230px;
+  min-height: 260px;
   background: var(--charcoal);
 }
 
@@ -409,6 +434,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .preview-copy {
@@ -417,6 +443,29 @@ p {
 
 .preview-copy p:not(.eyebrow) {
   color: var(--muted);
+}
+
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 13px 15px;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.linkedin-mark {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: #fff;
+  background: #0a66c2;
+  font-weight: 800;
+  line-height: 1;
 }
 
 .download-link {
