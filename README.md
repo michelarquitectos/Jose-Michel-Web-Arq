@@ -1,4 +1,4 @@
-# Landing page - $itios Web & Architecture.
+# Landing page - Arquitectura y sitios web
 
 Sitio sencillo para usar como enlace en la bio de Instagram.
 
