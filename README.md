@@ -11,6 +11,7 @@ Sitio sencillo para usar como enlace en la bio de Instagram.
 - `qr-web.png`: QR del sitio web de arquitectura.
 - `qr-instagram.png`: QR de Instagram.
 - `qr-whatsapp.png`: QR de WhatsApp.
+- `cert-*.jpg`: certificados de cursos.
 
 ## Para subirlo a GitHub
 
@@ -23,6 +24,7 @@ Sitio sencillo para usar como enlace en la bio de Instagram.
    - `qr-web.png`
    - `qr-instagram.png`
    - `qr-whatsapp.png`
+   - todos los archivos `cert-*.jpg`
 3. En GitHub, entra a `Settings > Pages`.
 4. En `Build and deployment`, selecciona:
    - Source: `Deploy from a branch`
