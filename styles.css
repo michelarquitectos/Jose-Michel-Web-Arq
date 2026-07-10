@@ -310,6 +310,9 @@ p {
 .offer-card,
 .linkedin-link,
 .site-preview,
+.architecture-feature,
+.render-card,
+.library-card,
 .download-link {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -419,17 +422,29 @@ p {
   background: rgba(47, 93, 80, 0.07);
 }
 
+.architecture-contact {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 0.82fr);
+  gap: 14px;
+  align-items: stretch;
+  margin-bottom: 20px;
+}
+
 .qr-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-bottom: 24px;
+  grid-template-columns: 1fr;
+  gap: 10px;
 }
 
 .qr-card {
   display: grid;
-  justify-items: center;
-  gap: 8px;
-  padding: 16px;
-  text-align: center;
+  grid-template-columns: minmax(118px, 144px) minmax(0, 1fr);
+  justify-items: start;
+  align-items: center;
+  align-content: center;
+  column-gap: 14px;
+  min-height: 148px;
+  padding: 18px 12px;
+  text-align: left;
   transition:
     border-color 180ms ease,
     box-shadow 180ms ease,
@@ -443,13 +458,46 @@ p {
 }
 
 .qr-image {
-  width: min(122px, 100%);
+  grid-row: 1 / span 2;
+  width: min(144px, 100%);
   aspect-ratio: 1;
   object-fit: contain;
   border: 8px solid #fff;
   border-radius: 6px;
   background: #fff;
   box-shadow: 0 0 0 1px var(--line);
+}
+
+.qr-card strong,
+.qr-card small {
+  grid-column: 2;
+}
+
+.architecture-feature {
+  min-height: 464px;
+  display: grid;
+  align-content: end;
+  gap: 8px;
+  padding: 18px;
+  color: #fff;
+  background:
+    linear-gradient(180deg, rgba(21, 26, 27, 0.14), rgba(21, 26, 27, 0.76)),
+    url("coleccion-estilos-2026.png") center / cover;
+  overflow: hidden;
+}
+
+.architecture-feature span,
+.render-card span,
+.library-card span {
+  color: var(--gold);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.architecture-feature strong {
+  font-size: 1.34rem;
+  line-height: 1.08;
 }
 
 .site-preview {
@@ -481,6 +529,70 @@ p {
 
 .preview-copy p:not(.eyebrow) {
   color: var(--muted);
+}
+
+.render-section {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.render-card {
+  min-height: 152px;
+  display: grid;
+  align-content: end;
+  gap: 8px;
+  padding: 16px;
+  color: #fff;
+  background:
+    linear-gradient(180deg, rgba(21, 26, 27, 0.06), rgba(21, 26, 27, 0.78)),
+    var(--charcoal);
+}
+
+.render-card:nth-child(1) {
+  background:
+    linear-gradient(180deg, rgba(21, 26, 27, 0.06), rgba(21, 26, 27, 0.78)),
+    url("coleccion-estilos-2026.png") 78% 18% / 360% auto;
+}
+
+.render-card:nth-child(2) {
+  background:
+    linear-gradient(180deg, rgba(21, 26, 27, 0.08), rgba(21, 26, 27, 0.8)),
+    url("coleccion-estilos-2026.png") 72% 50% / 330% auto;
+}
+
+.render-card:nth-child(3) {
+  background:
+    linear-gradient(180deg, rgba(21, 26, 27, 0.08), rgba(21, 26, 27, 0.82)),
+    url("coleccion-estilos-2026.png") 10% 84% / 320% auto;
+}
+
+.render-card strong {
+  font-size: 1.05rem;
+}
+
+.library-card {
+  display: grid;
+  gap: 6px;
+  margin-top: 16px;
+  padding: 18px 20px;
+  color: #fff;
+  background: var(--charcoal);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.library-card:hover {
+  border-color: rgba(198, 161, 91, 0.54);
+  box-shadow: 0 14px 34px rgba(31, 37, 38, 0.16);
+  transform: translateY(-2px);
+}
+
+.library-card strong {
+  font-size: 1.08rem;
 }
 
 .linkedin-link {
@@ -703,8 +815,14 @@ p {
   .mini-grid,
   .certificate-gallery,
   .qr-grid,
+  .architecture-contact,
+  .render-section,
   .hero-quotes {
     grid-template-columns: 1fr;
+  }
+
+  .architecture-feature {
+    min-height: 230px;
   }
 
   .hero-quotes {
@@ -727,5 +845,18 @@ p {
   .button,
   .contact-form .button {
     width: 100%;
+  }
+
+  .qr-card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .qr-image,
+  .qr-card strong,
+  .qr-card small {
+    grid-column: auto;
+    grid-row: auto;
   }
 }
