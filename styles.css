@@ -440,6 +440,7 @@ p {
 }
 
 .offer-card {
+  position: relative;
   display: grid;
   gap: 4px;
   margin: 0 0 24px;
@@ -449,6 +450,41 @@ p {
     linear-gradient(135deg, rgba(47, 93, 80, 0.96), rgba(31, 37, 38, 0.96)),
     var(--forest);
   box-shadow: var(--shadow);
+  overflow: hidden;
+  animation: offerFloat 5.8s ease-in-out infinite;
+}
+
+.offer-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.14) 42%, transparent 64%);
+  transform: translateX(-120%);
+  animation: offerSheen 6.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes offerFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes offerSheen {
+  0%,
+  48% {
+    transform: translateX(-120%);
+  }
+
+  72%,
+  100% {
+    transform: translateX(120%);
+  }
 }
 
 .offer-card span,
@@ -1081,5 +1117,14 @@ p {
   .web-service-visual {
     justify-items: center;
     text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-portrait,
+  .hero-badge,
+  .offer-card,
+  .offer-card::after {
+    animation: none;
   }
 }
