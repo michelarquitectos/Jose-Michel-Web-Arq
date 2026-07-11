@@ -593,6 +593,16 @@ p {
   overflow: hidden;
   margin-top: 18px;
   box-shadow: var(--shadow);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.site-preview:hover {
+  border-color: rgba(47, 93, 80, 0.34);
+  box-shadow: 0 18px 42px rgba(31, 37, 38, 0.16);
+  transform: translateY(-2px);
 }
 
 .preview-image {
@@ -678,6 +688,12 @@ p {
 
 .library-card strong {
   font-size: 1.08rem;
+}
+
+.library-card small {
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 700;
+  line-height: 1.45;
 }
 
 .linkedin-link {
