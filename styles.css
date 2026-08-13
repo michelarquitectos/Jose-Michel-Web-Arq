@@ -132,7 +132,7 @@ nav a {
   position: absolute;
   z-index: 3;
   left: 50%;
-  top: 0;
+  top: -12px;
   width: clamp(90px, 10vw, 142px);
   margin: 0;
   padding: 10px;
@@ -141,7 +141,7 @@ nav a {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
   backdrop-filter: blur(10px);
-  transform: translate(-50%, -58%);
+  transform: translate(-50%, -100%);
   animation: badgeFloat 6s ease-in-out infinite;
   animation-delay: -1.6s;
 }
@@ -154,11 +154,11 @@ nav a {
 @keyframes badgeFloat {
   0%,
   100% {
-    transform: translate(-50%, -58%);
+    transform: translate(-50%, -100%);
   }
 
   50% {
-    transform: translate(-50%, calc(-58% - 10px));
+    transform: translate(-50%, calc(-100% - 10px));
   }
 }
 
@@ -1120,7 +1120,7 @@ p {
 
   .hero-badge {
     left: 50%;
-    top: 0;
+    top: -10px;
     right: auto;
     bottom: auto;
     width: min(31vw, 118px);
