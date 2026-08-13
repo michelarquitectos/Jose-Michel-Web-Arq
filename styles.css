@@ -130,9 +130,9 @@ nav a {
 
 .hero-badge {
   position: absolute;
-  z-index: 2;
-  right: clamp(172px, 26vw, 430px);
-  bottom: clamp(56px, 8vw, 112px);
+  z-index: 3;
+  left: 50%;
+  top: 0;
   width: clamp(90px, 10vw, 142px);
   margin: 0;
   padding: 10px;
@@ -141,13 +141,25 @@ nav a {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
   backdrop-filter: blur(10px);
-  animation: portraitFloat 6s ease-in-out infinite;
+  transform: translate(-50%, -58%);
+  animation: badgeFloat 6s ease-in-out infinite;
   animation-delay: -1.6s;
 }
 
 .hero-badge img {
   width: 100%;
   height: auto;
+}
+
+@keyframes badgeFloat {
+  0%,
+  100% {
+    transform: translate(-50%, -58%);
+  }
+
+  50% {
+    transform: translate(-50%, calc(-58% - 10px));
+  }
 }
 
 @keyframes portraitFloat {
@@ -283,6 +295,55 @@ p {
 
 .web-panel {
   background: var(--paper);
+}
+
+.web-showcase {
+  overflow: hidden;
+  width: min(88%, 680px);
+  margin: -10px auto 22px;
+  border: 1px solid rgba(31, 37, 38, 0.16);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 22px 56px rgba(31, 37, 38, 0.16);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.web-showcase:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 28px 66px rgba(31, 37, 38, 0.2);
+}
+
+.browser-bar {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-bottom: 1px solid rgba(31, 37, 38, 0.1);
+  background: #f5f2ec;
+}
+
+.browser-bar span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(31, 37, 38, 0.28);
+}
+
+.browser-bar small {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.web-showcase img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
 }
 
 .architecture-panel {
@@ -1058,9 +1119,10 @@ p {
   }
 
   .hero-badge {
-    left: 18px;
+    left: 50%;
+    top: 0;
     right: auto;
-    bottom: 34px;
+    bottom: auto;
     width: min(31vw, 118px);
     padding: 8px;
   }
