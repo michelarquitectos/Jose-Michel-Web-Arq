@@ -297,6 +297,22 @@ p {
   background: var(--paper);
 }
 
+.quotes-section {
+  display: flex;
+  justify-content: center;
+  padding: clamp(42px, 6vw, 72px) clamp(18px, 5vw, 70px);
+  background:
+    linear-gradient(135deg, rgba(47, 93, 80, 0.92), rgba(21, 26, 27, 0.98)),
+    var(--charcoal);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.quotes-section .hero-quotes {
+  width: min(1080px, 100%);
+  max-width: none;
+  margin-top: 0;
+}
+
 .web-showcase {
   overflow: hidden;
   width: min(88%, 680px);
@@ -1190,3 +1206,4 @@ p {
     animation: none;
   }
 }
+
